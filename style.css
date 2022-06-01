@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --text-color: hsl(240, 6%, 21%);
+  --card-bg: hsl(240, 9%, 89%); 
+  --card-on: hsl(194, 97%, 31%);
+}
+
+body {
+  background: #ffffff;
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19.2rem;
+  min-height: 100vh;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button svg {
+  width: clamp(3.2rem, 2rem + 12vw, 4.8rem);
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hide{
+  display: none;
+}
+
+#cards {
+  display: grid;
+  grid-template: "A B"
+  "C D";
+  gap: 3.2rem;
+}
+
+#cards .on {
+  background: var(--card-on);
+}
+
+#cards .on svg path {
+  fill: white;
+}
+
+#cards button {
+  width: 15.2rem;
+  height: 13.8rem;
+  background: var(--card-bg);
+  border-radius: 2.4rem;  
+}
+
+#timer {
+  font-size: clamp(5rem, 4rem + 10vw, 12.61rem);
+  display: flex;
+  margin-bottom: 1.7rem;
+}
